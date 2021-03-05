@@ -25,13 +25,16 @@ let secondes = (date.getSeconds());
 // J'utilise la fonction rotate pour la rotation des aiguilles et deg pour degrès
 // Mes aiguilles recupérer se déplace en fonction de l'heure et se déplace en fonction du degrès calculer
 
-AIGUILLEHR.style.transform =`rotate(${heure * 360 /12}deg)`
-AIGUILLEMIN.style.transform =`rotate(${minute * 360 /60 + secondes * 6/60}deg)`
-AIGUILLESEC.style.transform = `rotate(${secondes * 360 / 60}deg)`
+// AIGUILLEHR.style.transform =`rotate(${heure * 360 /12}deg)`
+AIGUILLEHR.style.transform = "rotate(" + heure * 360/12 + "deg)"
+// AIGUILLEMIN.style.transform =`rotate(${minute * 360 /60 + secondes * 6/60}deg)`
+AIGUILLEMIN.style.transform = "rotate(" + minute * 360/60 + secondes * 6/60+  "deg)"
+// AIGUILLESEC.style.transform = `rotate(${secondes * 360 / 60}deg)`
+AIGUILLESEC.style.transform =  "rotate(" + secondes * 360 / 60 + "deg)"
 
 
 
 
 }
-// Exercuter la fonction chaque second
+// Executer la fonction chaque second
 setInterval(demarrerLaMontre, 1000);
